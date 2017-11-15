@@ -1,7 +1,11 @@
 // 1. Write a function that takes a callback to implement the
 //    forEach array method.
 
-function myForEach(arr, callback) {}
+function myForEach(arr, callback) {
+  for (var i = 0; i < arr.length; i++) {
+    callback(arr[i], i);
+  }
+}
 
 // test for #1
 var myArr = ['one', 'two', 'three', 'four'];
@@ -15,7 +19,13 @@ three
 four
 */
 
-function myMap(arr, callback) {}
+function myMap(arr, callback) {
+  var newArr = [];
+  for (var i = 0; i < arr.length; i++) {
+    newArr.push(callback(arr[i], i));
+  }
+  return newArr;
+}
 
 var mySecondArr = [1, 2, 3, 4, 5];
 console.log(
