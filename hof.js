@@ -3,7 +3,7 @@
 
 function myForEach(arr, callback) {
    for (var i = 0; i < arr.length; i++) {
-   	callback(arr[i]);
+   	callback(arr[i], i);
    }
 
 }
@@ -25,7 +25,7 @@ four
 function myMap(arr, callback) {
   var acc = [];
   for (var i = 0; i < arr.length; i++) {
-  	acc.push(callback(arr[i]));
+  	acc.push(callback(arr[i], i));
   }
   return acc;
 }
