@@ -13,10 +13,10 @@ myForEach(myArr, function(element, i) {
   console.log(element, i);
 });
 /*
-one
-two
-three
-four
+one 0
+two 1
+three 2
+four 3
 */
 
 function myMap(arr, callback) {
